@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct mvvmApp: App {
+	
+	@StateObject var manager = ItemManager()
+	
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			ContentView(manager: manager)
         }
     }
 }
